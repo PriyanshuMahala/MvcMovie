@@ -10,7 +10,7 @@ namespace MvcMovie.Controllers
             return "Ts s m dflt actn";
         }
 
-        //pmo/welcome
+        // GET: pmo/welcome
         public string Welcome()
         {
             return "Welcome lirila larila";
