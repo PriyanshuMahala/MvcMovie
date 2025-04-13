@@ -1,19 +1,21 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.Text.Encodings.Web;
+using System.Xml.Linq;
 
 namespace MvcMovie.Controllers
 {
     public class pmoController : Controller
     {
         // GET: pmo
-        public string Index()
+        public IActionResult Index()
         {
-            return "Ts s m dflt actn";
+            return View();
         }
 
-        // GET: pmo/welcome
-        public string Welcome()
+        // GET: pmo/Welcome
+        public string Welcome(string name, int ID = 1)
         {
-            return "Welcome lirila larila";
+            return HtmlEncoder.Default.Encode($"Hello {name}, NumTimes is: {ID}");
         }
-    }
+    }   
 }
