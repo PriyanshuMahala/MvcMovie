@@ -12,12 +12,24 @@ namespace MvcMovie.Controllers
             return View();
         }
 
-        // GET: pmo/Welcome
-        public IActionResult Welcome(string name, int ID = 1)
+        //POST: pmo/HandleForm
+        [HttpPost]
+        public IActionResult HandleForm(int id, string name)
         {
-            ViewData["Message"] = "Hello " +  name;
-            ViewData["ID"] = ID;
-            return View();
+            // Process the form data
+            ViewData["ID"] = id;
+            ViewData["Name"] = name;
+
+            return View("Welcome");
+
         }
+
+        // GET: pmo/Welcome
+        [HttpGet]
+        public IActionResult Welcome()
+        {
+            
+            return View();
+        }   
     }   
 }
