@@ -1,22 +1,15 @@
-﻿
-@{
-    ViewData["Title"] = "Index";
+﻿@{
+	ViewData["Title"] = "Index";
 }
 
 <h1>Index</h1>
 
-<div>
-    <h3>
-        <a class="nav-link" style="color: blue;" asp-controller="pmo" asp-action="Welcome">Welcome</a>
-    </h3>
-</div>
-
 <form method="post" asp-controller="pmo" asp-action="HandleForm">
-    <label for="id">ID:</label>
-    <input type="text" id="id" name="id" /><br><br>
+	<label for="id">ID:</label>
+	<input required="true" type="text" id="id" name="id"/><br><br/>
 
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" /><br><br>
+	<label for="name">Name:</label>
+	<input required="true" type="text" id="name" name="name"/><br><br/>
 
-    <input type="submit" value="Submit" />
+	<input type="submit" value="Submit"/>
 </form>

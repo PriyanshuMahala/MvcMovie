@@ -3,6 +3,12 @@
     ViewData["Title"] = "Welcome";
 }
 
-<h1>@ViewData["Name"]</h1>
-<p>Your id is @ViewData["ID"] </p>
+<p>Your name is @ViewData["Name"]</p>
+<p>Your id is @ViewData["ID"] </p><br>
 
+<p>@{
+		for (int i = 0; i < 10; i++)
+		{
+			<p>Hello @ViewData["Name"] @i</p>
+		}
+   }</p>
